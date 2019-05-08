@@ -89,7 +89,7 @@ abstract class Messege
     public abstract TypeOfMessege CreateType();
     public abstract Expansion CreateExpansion();
 }
-// Фабрика создания летящего героя с арбалетом
+// Фабрика создания текстового сообщения формата тхт
 class SMSFactory : Messege
 {
     public override Expansion CreateExpansion()
@@ -115,7 +115,7 @@ class VideoFactory : Messege
         return new VideoMessege();
     }
 }
-
+// Фабрика видео сообщения с форматом мп3
 class AudioFactory : Messege
 {
     public override Expansion CreateExpansion()
@@ -128,7 +128,7 @@ class AudioFactory : Messege
         return new AudioMessege();
     }
 }
-// клиент - сам супергерой
+
 class ApiManager
 {
     private TypeOfMessege typeofmessege;
